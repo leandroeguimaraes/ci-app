@@ -1,4 +1,3 @@
-# Define a imagem base
 FROM node:19-alpine3.16
 
 # Define o diretório de trabalho
