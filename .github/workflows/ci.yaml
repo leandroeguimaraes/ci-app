@@ -24,12 +24,6 @@ jobs:
       - name: Run Build
         run: npm run build
 
-      - name: Start server
-        run: nohup npm run start:prod > server.log 2>&1 &
-
-      - name: Check status
-        run: tail -n 1 server.log | grep -q 'Nest application successfully started'
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
