@@ -7,4 +7,4 @@ resources:
 images:
 - name: ci-app
   newName: leandrortn/ci-app
-  newTag: teste
+  newTag: 9c59f9b68b59a63c7fd30d7839570c72fdbfff60
