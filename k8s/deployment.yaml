@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ci-app-deploy
+  labels:
+    app: api-gateway-deploy  
+spec:
+  selector:
+    matchLabels:
+      app: ci-app
+  template:
+    metadata:
+      labels:
+        app: ci-app
+    spec:
+      containers:
+      - name: ci-app
+        image: leandrortn/ci-app
+        ports:
+        - containerPort: 80
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ci-app-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: ci-app
+  ports:
+  - port: 9001
+    targetPort: 80
