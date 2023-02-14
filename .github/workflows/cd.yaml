@@ -41,4 +41,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        repository: leandrortn/ci-app
+        repository: leandroeguimaraes/ci-app
